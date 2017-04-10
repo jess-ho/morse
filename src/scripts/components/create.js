@@ -12,9 +12,9 @@ export default class Create extends React.Component {
 		}
 	}
 	render() {
-		document.getElementsByClass('message')[0].addEventListener('keyDown', (e) => {
+		document.getElementsByClassName('message')[0].addEventListener('keyDown', (e) => {
 			if (e.keyCode >= 65 && e.keyCode <= 90) {
-				
+
 			}
 		})
 		return (
