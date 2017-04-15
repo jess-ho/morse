@@ -7,7 +7,7 @@ export default class Practice extends React.Component {
 	render() {
 		const letters = Object.keys(morse)
 		return (
-			<div>
+			<div className="container">
 				{
 					letters.map((letter, i) => {
 						return (
