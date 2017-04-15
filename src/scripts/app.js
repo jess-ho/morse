@@ -15,21 +15,11 @@ class App extends React.Component {
 		}
 	}
 	render() {
-		// const myKeyPress = (e) => {
-		// 	const keynum
-
-		// 	if (window.event) {
-		// 		keynum = e.keyCode
-		// 	} else if (e.which) {
-		// 		keynum = e.which
-		// 	}
-
-		// 	console.log(String.fromCharCode(keynum))
-		// }
+		
 		return (
 			<div>
 				<header>
-					<h1>-- --- .-. ... .</h1> {/* morse in morse */}
+					<h1>Morse<span className="secondHeader" aria-hidden="true">-- --- .-. ... .</span></h1> {/* morse in morse */}
 					<nav>
 						<Link to='/'>Cheatsheet</Link>
 						<Link to={`/quiz`}>Quiz</Link> 
