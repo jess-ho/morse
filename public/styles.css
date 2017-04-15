@@ -5,3 +5,10 @@ header {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between; }
+
+.container {
+  display: -ms-flexbox;
+  display: flex; }
+
+.secondHeader {
+  display: block; }
