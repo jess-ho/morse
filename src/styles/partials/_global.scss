@@ -1,0 +1,55 @@
+$fontColor: #373833;
+$accentColor: #F24A4A;
+$hoverColor: #F49898;
+$secondaryColor: #A39E9C;
+$focusedColor: #D6D4D2;
+$white: #F8FAF9;
+
+$headerFont: 'Titillium Web', sans-serif;
+$bodyFont: 'Lato', sans-serif;
+
+html {
+	color: $fontColor;
+}
+
+body {
+	background: $white;
+	font-family: $bodyFont;
+	font-size: 18px;
+	text-align: center;
+}
+
+a {
+	color: $accentColor;
+	text-decoration: none;
+	margin: 0 17px;
+	transition: all .2s ease;
+
+	&:hover {
+		color: $hoverColor;
+	}
+}
+
+h1 {
+	font-family: $headerFont;
+	text-transform: uppercase;
+	letter-spacing: 7px;
+	font-size: 35px;
+
+	span {
+		letter-spacing: 0;
+	}
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+.wrapper {
+	width: 85%;
+	margin: 0 auto;
+}

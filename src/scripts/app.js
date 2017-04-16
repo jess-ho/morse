@@ -33,7 +33,9 @@ class App extends React.Component {
 					<p className="copyright">&copy; Jessica Ho | Front-End Web Dev</p>
 					<p className="footer-header">-- --- .-. ... .</p>
 					<div className="social-container">
-						<Link to="https://github.com/jess-ho/morse"><i className="fa fa-github"></i></Link>
+						<Link to="https://github.com/jess-ho/morse"><i className="fa fa-github" aria-hidden="true"></i></Link>
+						<Link to="https://twitter.com/thisisJessHo"><i className="fa fa-twitter" aria-hidden="true"></i></Link>
+						<Link to="http://jessho.co/"><i className="fa fa-mouse-pointer" aria-hidden="true"></i></Link>
 					</div>
 				</footer>
 			</div>

@@ -1,0 +1,30 @@
+@media all and (max-width: 600px) {
+	header {
+		flex-direction: column;
+	}
+
+	.secondHeader {
+		display: none;
+	}
+
+	.message {
+		flex-direction: column;
+	}
+
+	textarea, .translatedCode {
+		width: 100%;
+		margin: 0;
+	}
+
+	.translatedCode {
+		height: 242px;
+	}
+
+	input {
+		width: 80%;
+	}
+
+	footer {
+		flex-direction: column-reverse;
+	}
+}

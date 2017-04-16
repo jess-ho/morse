@@ -140,7 +140,8 @@ body {
 a {
   color: #F24A4A;
   text-decoration: none;
-  margin: 0 20px; }
+  margin: 0 17px;
+  transition: all .2s ease; }
   a:hover {
     color: #F49898; }
 
@@ -169,7 +170,11 @@ header {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  text-align: left; }
+  text-align: left;
+  padding: 22px 0; }
+
+nav {
+  letter-spacing: 1px; }
 
 .container {
   display: -ms-flexbox;
@@ -222,7 +227,6 @@ footer {
   font-size: 14px;
   text-align: left;
   padding: 20px 0;
-  position: fixed;
   background: #F8FAF9;
   bottom: 0;
   left: 0;
@@ -267,3 +271,23 @@ button {
 
 .final-score {
   font-size: 18px; }
+
+@media all and (max-width: 600px) {
+  header {
+    -ms-flex-direction: column;
+        flex-direction: column; }
+  .secondHeader {
+    display: none; }
+  .message {
+    -ms-flex-direction: column;
+        flex-direction: column; }
+  textarea, .translatedCode {
+    width: 100%;
+    margin: 0; }
+  .translatedCode {
+    height: 242px; }
+  input {
+    width: 80%; }
+  footer {
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse; } }
