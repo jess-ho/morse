@@ -15,8 +15,7 @@ export default class Create extends React.Component {
 	}
 	myKeyPress(e) {
 		// convert string of this.state.text into an array where each letter is separated
-		const textSplit = e.target.value.replace(/[^\w]/gi, ' ').split('')
-		// console.log(textSplit)
+		const textSplit = e.target.value.split('')
 
 		// loop through the array and match against database
 		const textArray = []
@@ -24,12 +23,9 @@ export default class Create extends React.Component {
 
 		for (var i = 0; i < textSplit.length; i++) {
 			for (var j = 0; j < charList.length; j++) {
-				if (textSplit[i] === charList[j]) {
+				if (textSplit[i].toLowerCase() === charList[j]) {
 					textArray.push(morse[charList[j]])
 				} 
-				// else if (textSplit[i] === " ") {
-				// 	textArray.push("")
-				// }
 			}
 
 			if (textSplit[i] === " ") {
@@ -40,21 +36,20 @@ export default class Create extends React.Component {
 		// put enter as new line
 		// console.log(textArray)
 
-		// set state for both at once, updates in real time? iunno something like that
 		this.setState({
 			[e.target.name]: e.target.value,
 			codes: textArray.join(' ')
 		})
-
-		// console.log(e.target.value)
-		// console.log(textInput)
 	}
 	render() {
 		return (
-			<div className="message">
-				<textarea name="text" id="" cols="30" rows="10" value={this.state.text} onChange={this.myKeyPress}></textarea>
-				<div>
-					{this.state.codes}
+			<div>
+				<p>Create your own message</p>
+				<div className="message wrapper">
+					<textarea name="text" id="" cols="30" rows="10" placeholder="Type your message here" value={this.state.text} onChange={this.myKeyPress}></textarea>
+					<div className="translatedCode">
+						{this.state.codes}
+					</div>
 				</div>
 			</div>
 		)

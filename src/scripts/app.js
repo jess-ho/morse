@@ -18,7 +18,7 @@ class App extends React.Component {
 		
 		return (
 			<div>
-				<header>
+				<header className="wrapper">
 					<h1>Morse<span className="secondHeader" aria-hidden="true">-- --- .-. ... .</span></h1> {/* morse in morse */}
 					<nav>
 						<Link to='/'>Cheatsheet</Link>
@@ -28,6 +28,14 @@ class App extends React.Component {
 				</header>
 
 				{this.props.children || <Practice morse={this.state.morseList} />}
+
+				<footer className="wrapper">
+					<p className="copyright">&copy; Jessica Ho | Front-End Web Dev</p>
+					<p className="footer-header">-- --- .-. ... .</p>
+					<div className="social-container">
+						<Link to="https://github.com/jess-ho/morse"><i className="fa fa-github"></i></Link>
+					</div>
+				</footer>
 			</div>
 		)
 	}
