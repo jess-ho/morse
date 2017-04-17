@@ -21,13 +21,13 @@ class App extends React.Component {
 				<header className="wrapper">
 					<h1>Morse<span className="secondHeader" aria-hidden="true">-- --- .-. ... .</span></h1> {/* morse in morse */}
 					<nav>
-						<Link to='/'>Cheatsheet</Link>
-						<Link to={`/quiz`}>Quiz</Link> 
-						<Link to={`/create`}>Create</Link>
+						<Link to='/morse'>Cheatsheet</Link>
+						<Link to={`/morse/quiz`}>Quiz</Link> 
+						<Link to={`/morse/create`}>Create</Link>
 					</nav>
 				</header>
 
-				{this.props.children || <Practice morse={this.state.morseList} />}
+				{this.props.children || <Practice />}
 
 				<footer className="wrapper">
 					<p className="copyright">&copy; Jessica Ho | Front-End Web Dev</p>
@@ -45,9 +45,9 @@ class App extends React.Component {
 
 ReactDOM.render(
 	<Router history={browserHistory}>
-		<Route path="/" component={App}>
-			<Route path="/quiz" component={Quiz} />
-			<Route path="/create" component={Create} />
+		<Route path="/morse" component={App}>
+			<Route path="/morse/quiz" component={Quiz} />
+			<Route path="/morse/create" component={Create} />
 		</Route>
 	</Router>
 , document.getElementById('app'))
